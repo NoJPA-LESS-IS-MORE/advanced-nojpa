@@ -1,5 +1,6 @@
 package dk.lessismore.advnojpa.service.impl;
 
+import dk.lessismore.advnojpa.model.Address;
 import dk.lessismore.advnojpa.model.Person;
 import dk.lessismore.advnojpa.service.PersonService;
 import dk.lessismore.nojpa.db.methodquery.MQL;
@@ -24,8 +25,7 @@ public class PersonServiceImpl implements PersonService {
     public Person create(String name) {
         Person person = ModelObjectService.create(Person.class);
         person.setName(name);
-        ModelObjectService.save(person);
-        ModelObjectSearchService.put(person);
+        save(person);
         return person;
     }
 
@@ -38,6 +38,17 @@ public class PersonServiceImpl implements PersonService {
     public Page<Person> get(Pageable p) {
         NList<Person> list = NQL.search(Person.class).limit(p.getOffset(), p.getOffset() + p.getPageSize()).getList();
         return new PageImpl<>(list, p, list.getNumberFound());
+    }
+
+    @Override
+    public void lives(Person person, Address address) {
+        person.setAddress(address);
+        save(person);
+    }
+
+    private void save(Person person) {
+        ModelObjectService.save(person);
+        ModelObjectSearchService.put(person);
     }
 
 }

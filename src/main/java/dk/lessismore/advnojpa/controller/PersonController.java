@@ -28,11 +28,6 @@ public class PersonController {
     @Autowired
     private BookService bookService;
 
-    @RequestMapping("all")
-    public List<Person> home() {
-        return personService.get();
-    }
-
     @RequestMapping
     public Page<Person> paging(@PageableDefault Pageable p) {
         return personService.get(p);
@@ -49,10 +44,5 @@ public class PersonController {
         return new RedirectView(UrlHelper.personUrl(person));
     }
 
-    @RequestMapping(value = "{person}/books", method = RequestMethod.PUT)
-    public Book[] assignBook(@PathVariable Person person, @RequestParam Book book) {
-        bookService.assign(book, person);
-        return person.getBooks();
-    }
 
 }

@@ -18,7 +18,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 public class Application {
 
     @Autowired
-    SolrService personSolrService;
+    private SolrService personSolrService;
 
     @Autowired
     private InitDatabaseServiceImpl initDatabaseService;

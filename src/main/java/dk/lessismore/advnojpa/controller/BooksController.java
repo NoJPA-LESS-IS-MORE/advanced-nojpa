@@ -30,8 +30,16 @@ public class BooksController {
         return new RedirectView(UrlHelper.bookUrl(book));
     }
 
+
+    @RequestMapping(value = "{person}/books", method = RequestMethod.PUT)
+    public Book[] assignBook(@PathVariable Person person, @RequestParam Book book) {
+        bookService.assign(book, person);
+        return person.getBooks();
+    }
+
     @RequestMapping("/books/{book}")
     public Book book(@PathVariable Book book) {
         return book;
     }
+
 }

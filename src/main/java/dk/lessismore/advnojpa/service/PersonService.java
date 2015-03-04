@@ -1,5 +1,6 @@
 package dk.lessismore.advnojpa.service;
 
+import dk.lessismore.advnojpa.model.Address;
 import dk.lessismore.advnojpa.model.Person;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -16,4 +17,6 @@ public interface PersonService {
     List<Person> get();
 
     Page<Person> get(Pageable p);
+
+    void lives(Person person, Address address);
 }
