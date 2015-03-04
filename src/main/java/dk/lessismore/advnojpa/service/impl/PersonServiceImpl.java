@@ -24,7 +24,7 @@ public class PersonServiceImpl implements PersonService {
         Person person = ModelObjectService.create(Person.class);
         person.setName(name);
         person.setParent(parent);
-        ModelObjectService.addObjectToArray(parent.getChildren(), person); // TODO is parent saved?
+        parent.setChildren(ModelObjectService.addObjectToArray(parent.getChildren(), person)); // TODO is parent saved?
         ModelObjectService.save(person);
         return person;
     }
