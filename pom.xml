@@ -18,7 +18,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <solr.version>4.10.2</solr.version>
+        <solr.version>4.10.3</solr.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <main.basedir>${basedir}/../..</main.basedir>
         <start-class>dk.lessismore.advnojpa.Application</start-class>
@@ -89,10 +89,6 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
         <dependency>
@@ -141,14 +137,22 @@
                     <artifactId>guava</artifactId>
                     <groupId>com.google.guava</groupId>
                 </exclusion>
+                <exclusion><artifactId>jetty-http</artifactId><groupId>org.eclipse.jetty</groupId></exclusion>
+                <exclusion><artifactId>jetty-io</artifactId><groupId>org.eclipse.jetty</groupId></exclusion>
+                <exclusion><artifactId>jetty-continuation</artifactId><groupId>org.eclipse.jetty</groupId></exclusion>
+                <exclusion><artifactId>jetty-deploy</artifactId><groupId>org.eclipse.jetty</groupId></exclusion>
+                <exclusion><artifactId>jetty-util</artifactId><groupId>org.eclipse.jetty</groupId></exclusion>
+                <exclusion><artifactId>jetty-xml</artifactId><groupId>org.eclipse.jetty</groupId></exclusion>
+                <exclusion><artifactId>jetty-webapp</artifactId><groupId>org.eclipse.jetty</groupId></exclusion>
+                <exclusion><artifactId>jetty-server</artifactId><groupId>org.eclipse.jetty</groupId></exclusion>
+                <exclusion><artifactId>jetty-servlet</artifactId><groupId>org.eclipse.jetty</groupId></exclusion>
+                <exclusion><artifactId>jetty-security</artifactId><groupId>org.eclipse.jetty</groupId></exclusion>
+                <exclusion><artifactId>jetty-jmx</artifactId><groupId>org.eclipse.jetty</groupId></exclusion>
+                <exclusion><artifactId>javax.servlet</artifactId><groupId>org.eclipse.jetty.orbit</groupId></exclusion>
             </exclusions>
         </dependency>
 
         <!-- jsps -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-tomcat</artifactId>
-        </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
@@ -180,10 +184,6 @@
             <groupId>org.webjars</groupId>
             <artifactId>jquery</artifactId>
             <version>2.1.3</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-taglibs</artifactId>
         </dependency>
 
 

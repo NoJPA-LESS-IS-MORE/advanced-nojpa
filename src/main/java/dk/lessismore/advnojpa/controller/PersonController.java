@@ -24,7 +24,7 @@ public class PersonController {
     @Autowired
     private PersonService personService;
 
-    @RequestMapping
+    @RequestMapping("all")
     public List<Person> home() {
         return personService.get();
     }

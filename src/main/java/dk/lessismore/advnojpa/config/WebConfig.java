@@ -47,7 +47,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         return DatabaseCreator.getSubtypes("dk.lessismore.advnojpa.model");
     }
 
-    @Bean
+    @Bean(name = {"objectMapper", "_halObjectMapper"})
     public ObjectMapper objectMapper() {
         return new NoJpaMapper();
     }

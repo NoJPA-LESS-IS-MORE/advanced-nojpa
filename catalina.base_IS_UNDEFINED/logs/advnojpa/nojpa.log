@@ -1,0 +1,690 @@
+19:05:16.374 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - ------------ Getting all children of MOI from package: dk.lessismore.advnojpa.model
+19:05:16.437 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - annoList.size()::0
+19:05:16.438 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - getSubtypes: removing because it's annotated with @IgnoreFromTableCreation clazz = []
+19:05:16.438 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - getSubtypes: found types: [interface dk.lessismore.advnojpa.model.Person]
+19:05:16.438 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - ********* re/createDatabase ***************** - START
+19:05:16.443 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - Will create table for class dk.lessismore.advnojpa.model.Person with indices []
+19:05:16.447 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: getName
+19:05:16.448 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(Person.getName) = true
+19:05:16.449 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: getParent
+19:05:16.449 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(Person.getParent) = true
+19:05:16.449 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: setName
+19:05:16.450 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(Person.setName) = false
+19:05:16.450 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: setParent
+19:05:16.450 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(Person.setParent) = false
+19:05:16.450 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: getChildren
+19:05:16.450 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(Person.getChildren) = true
+19:05:16.450 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: setChildren
+19:05:16.450 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(Person.setChildren) = false
+19:05:16.450 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: isCachable
+19:05:16.450 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(ModelObjectInterface.isCachable) = false
+19:05:16.450 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: isNew
+19:05:16.450 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(ModelObjectInterface.isNew) = false
+19:05:16.450 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: getObjectID
+19:05:16.450 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(ModelObjectInterface.getObjectID) = true
+19:05:16.450 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: getCreationDate
+19:05:16.450 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(ModelObjectInterface.getCreationDate) = true
+19:05:16.450 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: setObjectID
+19:05:16.450 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(ModelObjectInterface.setObjectID) = false
+19:05:16.450 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: setCreationDate
+19:05:16.450 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(ModelObjectInterface.setCreationDate) = false
+19:05:16.450 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: isDirty
+19:05:16.450 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(ModelObjectInterface.isDirty) = false
+19:05:16.454 [main] DEBUG d.l.nojpa.cache.ObjectArrayCache - Cant find resources for ObjectArrayCache.properties - will use standard values: maxCacheSize(2000)
+19:05:16.454 [main] DEBUG d.l.nojpa.cache.ObjectArrayCache - Cant find resources for ObjectArrayCache.properties - will use standard values: cacheOn(true)
+19:05:16.455 [main] DEBUG d.l.n.resources.PropertyResources - Loading : file:/Users/niakoi/Projects/advanced-nojpa/target/classes/ObjectCache.properties
+19:05:16.456 [main] DEBUG d.l.n.r.db.model.ModelObjectProxy - Creating new ModelObject(dk.lessismore.advnojpa.model.Person)/0
+19:05:16.460 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - makeTableFromClass : attributeContainer = Table:_Person
+DbAtt:Att: name(parent) attribute.type(Person) isArray(false) isWriteable(true) isReadable(true) class=Person		isPrimaryKey=false isAssociation=true isMultiAssociation=false DataType=VARCHAR(32)
+DbAtt:Att: name(children) attribute.type(Person) isArray(true) isWriteable(true) isReadable(true) class=Person		isPrimaryKey=false isAssociation=true isMultiAssociation=true DataType=VARCHAR(32)
+DbAtt:Att: name(name) attribute.type(String) isArray(false) isWriteable(true) isReadable(true) class=String		isPrimaryKey=false isAssociation=false isMultiAssociation=false DataType=VARCHAR(250)
+DbAtt:Att: name(creationDate) attribute.type(Calendar) isArray(false) isWriteable(true) isReadable(true) class=Calendar		isPrimaryKey=false isAssociation=false isMultiAssociation=false DataType=DATETIME
+DbAtt:Att: name(objectID) attribute.type(String) isArray(false) isWriteable(true) isReadable(true) class=String		isPrimaryKey=true isAssociation=false isMultiAssociation=false DataType=CHAR(32)
+
+19:05:16.462 [main] DEBUG d.l.n.d.s.SQLStatementFactory - getDropSQLStatement() :: log = MYSQL
+19:05:16.463 [main] DEBUG d.l.n.d.s.SQLStatementFactory - getCreateSQLStatement() :: log = MYSQL
+19:05:16.463 [main] DEBUG d.l.n.d.s.SQLStatementFactory - getDropSQLStatement() :: log = MYSQL
+19:05:16.463 [main] DEBUG d.l.n.d.s.SQLStatementFactory - getCreateSQLStatement() :: log = MYSQL
+19:05:16.463 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - makeTableFromClass : targetClass = interface dk.lessismore.advnojpa.model.Person
+19:05:16.463 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - makeTableFromClass : dbAttribute.getAttributeName() = name
+19:05:16.463 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - makeTableFromClass : dbAttribute.getAttribute().getDeclaredAnnotations() = [Ljava.lang.annotation.Annotation;@12f8b1d8
+19:05:16.463 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - makeTableFromClass : targetClass = interface dk.lessismore.advnojpa.model.Person
+19:05:16.463 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - makeTableFromClass : dbAttribute.getAttributeName() = creationDate
+19:05:16.463 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - makeTableFromClass : dbAttribute.getAttribute().getDeclaredAnnotations() = [Ljava.lang.annotation.Annotation;@746cd757
+19:05:16.465 [main] INFO  d.l.nojpa.resources.PropertyService - Read {SQLStatementExecutor=dk.lessismore.nojpa.resources.PropertyResources@4349754}, class=SQLStatementExecutor
+19:05:16.470 [main] ERROR d.l.nojpa.resources.Resources - The resource debug does not exists is missing or file
+java.lang.Exception: The resource debug does not exists is missing or file
+	at dk.lessismore.nojpa.resources.Resources.getBoolean(Resources.java:145) ~[nojpa_orm-0.1-20150226.111810-62.jar:na]
+	at dk.lessismore.nojpa.db.SQLStatementExecutor.<clinit>(SQLStatementExecutor.java:52) [nojpa_orm-0.1-20150226.111810-62.jar:na]
+	at dk.lessismore.nojpa.reflection.db.DatabaseCreator.createDatabase(DatabaseCreator.java:374) [nojpa_orm-0.1-20150226.111810-62.jar:na]
+	at dk.lessismore.nojpa.reflection.db.DatabaseCreator.createDatabase(DatabaseCreator.java:335) [nojpa_orm-0.1-20150226.111810-62.jar:na]
+	at dk.lessismore.nojpa.reflection.db.DatabaseCreator.createDatabase(DatabaseCreator.java:329) [nojpa_orm-0.1-20150226.111810-62.jar:na]
+	at dk.lessismore.advnojpa.service.impl.InitDatabaseServiceImpl.createDatabase(InitDatabaseServiceImpl.java:76) [classes/:na]
+	at dk.lessismore.advnojpa.service.impl.InitDatabaseServiceImpl.init(InitDatabaseServiceImpl.java:55) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:349) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:300) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:133) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:408) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1558) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1120) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1044) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:942) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:533) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1202) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757) [spring-context-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480) [spring-context-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:686) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:320) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:957) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:946) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at dk.lessismore.advnojpa.Application.main(Application.java:28) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134) [idea_rt.jar:na]
+19:05:16.470 [main] DEBUG d.l.n.d.c.ConnectionPoolFactory - making pool
+19:05:16.491 [main] DEBUG d.lessismore.nojpa.pool.ResourcePool - Creating pool x-start
+19:05:16.491 [main] DEBUG d.lessismore.nojpa.pool.ResourcePool - createPool() making(0 out of 10)
+19:05:16.491 [main] DEBUG d.l.n.d.s.SQLStatementFactory - We will connect to database with DriverName(com.mysql.jdbc.Driver)
+19:05:16.491 [main] DEBUG d.l.n.d.c.ConnectionFactory - Creating new MySQL-DB-Connection jdbc:mysql://localhost:3306/advnojpadb
+19:05:16.674 [main] DEBUG d.lessismore.nojpa.pool.ResourcePool - createPool() making(1 out of 10)
+19:05:16.674 [main] DEBUG d.l.n.d.s.SQLStatementFactory - We will connect to database with DriverName(com.mysql.jdbc.Driver)
+19:05:16.675 [main] DEBUG d.l.n.d.c.ConnectionFactory - Creating new MySQL-DB-Connection jdbc:mysql://localhost:3306/advnojpadb
+19:05:16.678 [main] DEBUG d.lessismore.nojpa.pool.ResourcePool - createPool() making(2 out of 10)
+19:05:16.678 [main] DEBUG d.l.n.d.s.SQLStatementFactory - We will connect to database with DriverName(com.mysql.jdbc.Driver)
+19:05:16.678 [main] DEBUG d.l.n.d.c.ConnectionFactory - Creating new MySQL-DB-Connection jdbc:mysql://localhost:3306/advnojpadb
+19:05:16.682 [main] DEBUG d.lessismore.nojpa.pool.ResourcePool - createPool() making(3 out of 10)
+19:05:16.682 [main] DEBUG d.l.n.d.s.SQLStatementFactory - We will connect to database with DriverName(com.mysql.jdbc.Driver)
+19:05:16.682 [main] DEBUG d.l.n.d.c.ConnectionFactory - Creating new MySQL-DB-Connection jdbc:mysql://localhost:3306/advnojpadb
+19:05:16.685 [main] DEBUG d.lessismore.nojpa.pool.ResourcePool - createPool() making(4 out of 10)
+19:05:16.685 [main] DEBUG d.l.n.d.s.SQLStatementFactory - We will connect to database with DriverName(com.mysql.jdbc.Driver)
+19:05:16.685 [main] DEBUG d.l.n.d.c.ConnectionFactory - Creating new MySQL-DB-Connection jdbc:mysql://localhost:3306/advnojpadb
+19:05:16.688 [main] DEBUG d.lessismore.nojpa.pool.ResourcePool - createPool() making(5 out of 10)
+19:05:16.688 [main] DEBUG d.l.n.d.s.SQLStatementFactory - We will connect to database with DriverName(com.mysql.jdbc.Driver)
+19:05:16.688 [main] DEBUG d.l.n.d.c.ConnectionFactory - Creating new MySQL-DB-Connection jdbc:mysql://localhost:3306/advnojpadb
+19:05:16.692 [main] DEBUG d.lessismore.nojpa.pool.ResourcePool - createPool() making(6 out of 10)
+19:05:16.692 [main] DEBUG d.l.n.d.s.SQLStatementFactory - We will connect to database with DriverName(com.mysql.jdbc.Driver)
+19:05:16.692 [main] DEBUG d.l.n.d.c.ConnectionFactory - Creating new MySQL-DB-Connection jdbc:mysql://localhost:3306/advnojpadb
+19:05:16.695 [main] DEBUG d.lessismore.nojpa.pool.ResourcePool - createPool() making(7 out of 10)
+19:05:16.695 [main] DEBUG d.l.n.d.s.SQLStatementFactory - We will connect to database with DriverName(com.mysql.jdbc.Driver)
+19:05:16.695 [main] DEBUG d.l.n.d.c.ConnectionFactory - Creating new MySQL-DB-Connection jdbc:mysql://localhost:3306/advnojpadb
+19:05:16.698 [main] DEBUG d.lessismore.nojpa.pool.ResourcePool - createPool() making(8 out of 10)
+19:05:16.698 [main] DEBUG d.l.n.d.s.SQLStatementFactory - We will connect to database with DriverName(com.mysql.jdbc.Driver)
+19:05:16.698 [main] DEBUG d.l.n.d.c.ConnectionFactory - Creating new MySQL-DB-Connection jdbc:mysql://localhost:3306/advnojpadb
+19:05:16.702 [main] DEBUG d.lessismore.nojpa.pool.ResourcePool - createPool() making(9 out of 10)
+19:05:16.702 [main] DEBUG d.l.n.d.s.SQLStatementFactory - We will connect to database with DriverName(com.mysql.jdbc.Driver)
+19:05:16.702 [main] DEBUG d.l.n.d.c.ConnectionFactory - Creating new MySQL-DB-Connection jdbc:mysql://localhost:3306/advnojpadb
+19:05:16.705 [main] DEBUG d.lessismore.nojpa.pool.ResourcePool - Creating pool -done
+19:05:16.705 [main] DEBUG d.l.nojpa.db.SQLStatementExecutor - Will update with:::drop table if exists _Person
+19:05:16.708 [main] DEBUG d.l.nojpa.db.SQLStatementExecutor - Will update with:::create table _Person ( 	parent CHAR(32),  	name VARCHAR(250),  	creationDate DATETIME,  	objectID CHAR(32) NOT NULL, 	primary key (objectID)   ) ENGINE=MyISAM
+19:05:16.718 [main] DEBUG d.l.nojpa.db.SQLStatementExecutor - Will update with:::drop table if exists _Person_children
+19:05:16.719 [main] DEBUG d.l.nojpa.db.SQLStatementExecutor - Will update with:::create table _Person_children ( 	Person_objectID CHAR(32) NOT NULL,  	objectID CHAR(32) NOT NULL, 	primary key (Person_objectID, objectID)   ) ENGINE=MyISAM
+19:05:16.726 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - ********* re/createDatabase ********************* - DONE
+19:05:16.765 [main] DEBUG d.l.n.r.db.model.SolrServiceImpl - [ : constructor]:HIT:
+19:05:16.765 [main] DEBUG d.l.n.r.db.model.SolrServiceImpl - [void : (nojpa)startup]:HIT: dk.lessismore.nojpa.reflection.db.model.SolrServiceImpl@7e4d2287
+19:05:16.766 [main] ERROR d.l.n.r.db.model.SolrServiceImpl - [File : getSolrXml]: can't get solr xml resource: null
+java.lang.NullPointerException: null
+	at dk.lessismore.nojpa.reflection.db.model.SolrServiceImpl.getSolrXml(SolrServiceImpl.java:205) [nojpa_orm-0.1-20150226.111810-62.jar:na]
+	at dk.lessismore.nojpa.reflection.db.model.SolrServiceImpl.startup(SolrServiceImpl.java:66) [nojpa_orm-0.1-20150226.111810-62.jar:na]
+	at dk.lessismore.nojpa.reflection.db.model.SolrServiceImpl.getServer(SolrServiceImpl.java:55) [nojpa_orm-0.1-20150226.111810-62.jar:na]
+	at dk.lessismore.advnojpa.config.SolrConfig.getSolrService(SolrConfig.java:30) [classes/:na]
+	at dk.lessismore.advnojpa.config.SolrConfig.personSolrService(SolrConfig.java:23) [classes/:na]
+	at dk.lessismore.advnojpa.config.SolrConfig$$EnhancerBySpringCGLIB$$c96412d0.CGLIB$personSolrService$0(<generated>) [spring-core-4.1.5.RELEASE.jar:na]
+	at dk.lessismore.advnojpa.config.SolrConfig$$EnhancerBySpringCGLIB$$c96412d0$$FastClassBySpringCGLIB$$95d38b22.invoke(<generated>) [spring-core-4.1.5.RELEASE.jar:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) [spring-core-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:309) [spring-context-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at dk.lessismore.advnojpa.config.SolrConfig$$EnhancerBySpringCGLIB$$c96412d0.personSolrService(<generated>) [spring-core-4.1.5.RELEASE.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1111) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1006) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757) [spring-context-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480) [spring-context-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:686) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:320) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:957) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:946) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at dk.lessismore.advnojpa.Application.main(Application.java:28) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134) [idea_rt.jar:na]
+19:05:16.766 [main] DEBUG d.l.n.r.db.model.SolrServiceImpl - [ : config ]:: null
+19:05:16.768 [main] ERROR d.l.n.r.db.model.SolrServiceImpl - [ void: (nojpa)startup ]: exception constructing embedded server: null
+java.lang.NullPointerException: null
+	at dk.lessismore.nojpa.reflection.db.model.SolrServiceImpl.startup(SolrServiceImpl.java:68) [nojpa_orm-0.1-20150226.111810-62.jar:na]
+	at dk.lessismore.nojpa.reflection.db.model.SolrServiceImpl.getServer(SolrServiceImpl.java:55) [nojpa_orm-0.1-20150226.111810-62.jar:na]
+	at dk.lessismore.advnojpa.config.SolrConfig.getSolrService(SolrConfig.java:30) [classes/:na]
+	at dk.lessismore.advnojpa.config.SolrConfig.personSolrService(SolrConfig.java:23) [classes/:na]
+	at dk.lessismore.advnojpa.config.SolrConfig$$EnhancerBySpringCGLIB$$c96412d0.CGLIB$personSolrService$0(<generated>) [spring-core-4.1.5.RELEASE.jar:na]
+	at dk.lessismore.advnojpa.config.SolrConfig$$EnhancerBySpringCGLIB$$c96412d0$$FastClassBySpringCGLIB$$95d38b22.invoke(<generated>) [spring-core-4.1.5.RELEASE.jar:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) [spring-core-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:309) [spring-context-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at dk.lessismore.advnojpa.config.SolrConfig$$EnhancerBySpringCGLIB$$c96412d0.personSolrService(<generated>) [spring-core-4.1.5.RELEASE.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1111) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1006) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757) [spring-context-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480) [spring-context-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:686) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:320) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:957) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:946) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at dk.lessismore.advnojpa.Application.main(Application.java:28) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134) [idea_rt.jar:na]
+19:05:16.769 [main] INFO  d.l.n.r.d.m.ModelObjectSearchService - Adding solrServer(null) for class(Person)
+19:05:16.807 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - ------------ Getting all children of MOI from package: dk.lessismore.advnojpa.model
+19:05:16.808 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - annoList.size()::0
+19:05:16.808 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - getSubtypes: removing because it's annotated with @IgnoreFromTableCreation clazz = []
+19:05:16.808 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - getSubtypes: found types: [interface dk.lessismore.advnojpa.model.Person]
+19:06:19.935 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - ------------ Getting all children of MOI from package: dk.lessismore.advnojpa.model
+19:06:20.002 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - annoList.size()::0
+19:06:20.003 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - getSubtypes: removing because it's annotated with @IgnoreFromTableCreation clazz = []
+19:06:20.003 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - getSubtypes: found types: [interface dk.lessismore.advnojpa.model.Person]
+19:06:20.003 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - ********* re/createDatabase ***************** - START
+19:06:20.009 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - Will create table for class dk.lessismore.advnojpa.model.Person with indices []
+19:06:20.012 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: getName
+19:06:20.012 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(Person.getName) = true
+19:06:20.013 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: getParent
+19:06:20.013 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(Person.getParent) = true
+19:06:20.013 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: setName
+19:06:20.013 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(Person.setName) = false
+19:06:20.014 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: setParent
+19:06:20.014 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(Person.setParent) = false
+19:06:20.014 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: setChildren
+19:06:20.014 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(Person.setChildren) = false
+19:06:20.014 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: getChildren
+19:06:20.014 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(Person.getChildren) = true
+19:06:20.014 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: isCachable
+19:06:20.014 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(ModelObjectInterface.isCachable) = false
+19:06:20.014 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: isNew
+19:06:20.014 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(ModelObjectInterface.isNew) = false
+19:06:20.014 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: isDirty
+19:06:20.014 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(ModelObjectInterface.isDirty) = false
+19:06:20.014 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: getObjectID
+19:06:20.014 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(ModelObjectInterface.getObjectID) = true
+19:06:20.014 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: getCreationDate
+19:06:20.014 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(ModelObjectInterface.getCreationDate) = true
+19:06:20.014 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: setObjectID
+19:06:20.014 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(ModelObjectInterface.setObjectID) = false
+19:06:20.014 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: setCreationDate
+19:06:20.014 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(ModelObjectInterface.setCreationDate) = false
+19:06:20.018 [main] DEBUG d.l.nojpa.cache.ObjectArrayCache - Cant find resources for ObjectArrayCache.properties - will use standard values: maxCacheSize(2000)
+19:06:20.018 [main] DEBUG d.l.nojpa.cache.ObjectArrayCache - Cant find resources for ObjectArrayCache.properties - will use standard values: cacheOn(true)
+19:06:20.019 [main] DEBUG d.l.n.resources.PropertyResources - Loading : file:/Users/niakoi/Projects/advanced-nojpa/target/classes/ObjectCache.properties
+19:06:20.019 [main] DEBUG d.l.n.r.db.model.ModelObjectProxy - Creating new ModelObject(dk.lessismore.advnojpa.model.Person)/0
+19:06:20.024 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - makeTableFromClass : attributeContainer = Table:_Person
+DbAtt:Att: name(parent) attribute.type(Person) isArray(false) isWriteable(true) isReadable(true) class=Person		isPrimaryKey=false isAssociation=true isMultiAssociation=false DataType=VARCHAR(32)
+DbAtt:Att: name(children) attribute.type(Person) isArray(true) isWriteable(true) isReadable(true) class=Person		isPrimaryKey=false isAssociation=true isMultiAssociation=true DataType=VARCHAR(32)
+DbAtt:Att: name(name) attribute.type(String) isArray(false) isWriteable(true) isReadable(true) class=String		isPrimaryKey=false isAssociation=false isMultiAssociation=false DataType=VARCHAR(250)
+DbAtt:Att: name(creationDate) attribute.type(Calendar) isArray(false) isWriteable(true) isReadable(true) class=Calendar		isPrimaryKey=false isAssociation=false isMultiAssociation=false DataType=DATETIME
+DbAtt:Att: name(objectID) attribute.type(String) isArray(false) isWriteable(true) isReadable(true) class=String		isPrimaryKey=true isAssociation=false isMultiAssociation=false DataType=CHAR(32)
+
+19:06:20.027 [main] DEBUG d.l.n.d.s.SQLStatementFactory - getDropSQLStatement() :: log = MYSQL
+19:06:20.028 [main] DEBUG d.l.n.d.s.SQLStatementFactory - getCreateSQLStatement() :: log = MYSQL
+19:06:20.028 [main] DEBUG d.l.n.d.s.SQLStatementFactory - getDropSQLStatement() :: log = MYSQL
+19:06:20.028 [main] DEBUG d.l.n.d.s.SQLStatementFactory - getCreateSQLStatement() :: log = MYSQL
+19:06:20.028 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - makeTableFromClass : targetClass = interface dk.lessismore.advnojpa.model.Person
+19:06:20.028 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - makeTableFromClass : dbAttribute.getAttributeName() = name
+19:06:20.029 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - makeTableFromClass : dbAttribute.getAttribute().getDeclaredAnnotations() = [Ljava.lang.annotation.Annotation;@12f8b1d8
+19:06:20.029 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - makeTableFromClass : targetClass = interface dk.lessismore.advnojpa.model.Person
+19:06:20.029 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - makeTableFromClass : dbAttribute.getAttributeName() = creationDate
+19:06:20.029 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - makeTableFromClass : dbAttribute.getAttribute().getDeclaredAnnotations() = [Ljava.lang.annotation.Annotation;@746cd757
+19:06:20.031 [main] INFO  d.l.nojpa.resources.PropertyService - Read {SQLStatementExecutor=dk.lessismore.nojpa.resources.PropertyResources@4349754}, class=SQLStatementExecutor
+19:06:20.036 [main] ERROR d.l.nojpa.resources.Resources - The resource debug does not exists is missing or file
+java.lang.Exception: The resource debug does not exists is missing or file
+	at dk.lessismore.nojpa.resources.Resources.getBoolean(Resources.java:145) ~[nojpa_orm-0.1-20150226.111810-62.jar:na]
+	at dk.lessismore.nojpa.db.SQLStatementExecutor.<clinit>(SQLStatementExecutor.java:52) [nojpa_orm-0.1-20150226.111810-62.jar:na]
+	at dk.lessismore.nojpa.reflection.db.DatabaseCreator.createDatabase(DatabaseCreator.java:374) [nojpa_orm-0.1-20150226.111810-62.jar:na]
+	at dk.lessismore.nojpa.reflection.db.DatabaseCreator.createDatabase(DatabaseCreator.java:335) [nojpa_orm-0.1-20150226.111810-62.jar:na]
+	at dk.lessismore.nojpa.reflection.db.DatabaseCreator.createDatabase(DatabaseCreator.java:329) [nojpa_orm-0.1-20150226.111810-62.jar:na]
+	at dk.lessismore.advnojpa.service.impl.InitDatabaseServiceImpl.createDatabase(InitDatabaseServiceImpl.java:76) [classes/:na]
+	at dk.lessismore.advnojpa.service.impl.InitDatabaseServiceImpl.init(InitDatabaseServiceImpl.java:55) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:349) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:300) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:133) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:408) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1558) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1120) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1044) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:942) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:533) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1202) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757) [spring-context-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480) [spring-context-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:686) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:320) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:957) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:946) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at dk.lessismore.advnojpa.Application.main(Application.java:28) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134) [idea_rt.jar:na]
+19:06:20.036 [main] DEBUG d.l.n.d.c.ConnectionPoolFactory - making pool
+19:06:20.059 [main] DEBUG d.lessismore.nojpa.pool.ResourcePool - Creating pool x-start
+19:06:20.059 [main] DEBUG d.lessismore.nojpa.pool.ResourcePool - createPool() making(0 out of 10)
+19:06:20.059 [main] DEBUG d.l.n.d.s.SQLStatementFactory - We will connect to database with DriverName(com.mysql.jdbc.Driver)
+19:06:20.060 [main] DEBUG d.l.n.d.c.ConnectionFactory - Creating new MySQL-DB-Connection jdbc:mysql://localhost:3306/advnojpadb
+19:06:20.242 [main] DEBUG d.lessismore.nojpa.pool.ResourcePool - createPool() making(1 out of 10)
+19:06:20.242 [main] DEBUG d.l.n.d.s.SQLStatementFactory - We will connect to database with DriverName(com.mysql.jdbc.Driver)
+19:06:20.242 [main] DEBUG d.l.n.d.c.ConnectionFactory - Creating new MySQL-DB-Connection jdbc:mysql://localhost:3306/advnojpadb
+19:06:20.246 [main] DEBUG d.lessismore.nojpa.pool.ResourcePool - createPool() making(2 out of 10)
+19:06:20.247 [main] DEBUG d.l.n.d.s.SQLStatementFactory - We will connect to database with DriverName(com.mysql.jdbc.Driver)
+19:06:20.247 [main] DEBUG d.l.n.d.c.ConnectionFactory - Creating new MySQL-DB-Connection jdbc:mysql://localhost:3306/advnojpadb
+19:06:20.250 [main] DEBUG d.lessismore.nojpa.pool.ResourcePool - createPool() making(3 out of 10)
+19:06:20.250 [main] DEBUG d.l.n.d.s.SQLStatementFactory - We will connect to database with DriverName(com.mysql.jdbc.Driver)
+19:06:20.250 [main] DEBUG d.l.n.d.c.ConnectionFactory - Creating new MySQL-DB-Connection jdbc:mysql://localhost:3306/advnojpadb
+19:06:20.254 [main] DEBUG d.lessismore.nojpa.pool.ResourcePool - createPool() making(4 out of 10)
+19:06:20.254 [main] DEBUG d.l.n.d.s.SQLStatementFactory - We will connect to database with DriverName(com.mysql.jdbc.Driver)
+19:06:20.254 [main] DEBUG d.l.n.d.c.ConnectionFactory - Creating new MySQL-DB-Connection jdbc:mysql://localhost:3306/advnojpadb
+19:06:20.257 [main] DEBUG d.lessismore.nojpa.pool.ResourcePool - createPool() making(5 out of 10)
+19:06:20.257 [main] DEBUG d.l.n.d.s.SQLStatementFactory - We will connect to database with DriverName(com.mysql.jdbc.Driver)
+19:06:20.257 [main] DEBUG d.l.n.d.c.ConnectionFactory - Creating new MySQL-DB-Connection jdbc:mysql://localhost:3306/advnojpadb
+19:06:20.261 [main] DEBUG d.lessismore.nojpa.pool.ResourcePool - createPool() making(6 out of 10)
+19:06:20.261 [main] DEBUG d.l.n.d.s.SQLStatementFactory - We will connect to database with DriverName(com.mysql.jdbc.Driver)
+19:06:20.261 [main] DEBUG d.l.n.d.c.ConnectionFactory - Creating new MySQL-DB-Connection jdbc:mysql://localhost:3306/advnojpadb
+19:06:20.265 [main] DEBUG d.lessismore.nojpa.pool.ResourcePool - createPool() making(7 out of 10)
+19:06:20.265 [main] DEBUG d.l.n.d.s.SQLStatementFactory - We will connect to database with DriverName(com.mysql.jdbc.Driver)
+19:06:20.266 [main] DEBUG d.l.n.d.c.ConnectionFactory - Creating new MySQL-DB-Connection jdbc:mysql://localhost:3306/advnojpadb
+19:06:20.270 [main] DEBUG d.lessismore.nojpa.pool.ResourcePool - createPool() making(8 out of 10)
+19:06:20.270 [main] DEBUG d.l.n.d.s.SQLStatementFactory - We will connect to database with DriverName(com.mysql.jdbc.Driver)
+19:06:20.270 [main] DEBUG d.l.n.d.c.ConnectionFactory - Creating new MySQL-DB-Connection jdbc:mysql://localhost:3306/advnojpadb
+19:06:20.273 [main] DEBUG d.lessismore.nojpa.pool.ResourcePool - createPool() making(9 out of 10)
+19:06:20.273 [main] DEBUG d.l.n.d.s.SQLStatementFactory - We will connect to database with DriverName(com.mysql.jdbc.Driver)
+19:06:20.273 [main] DEBUG d.l.n.d.c.ConnectionFactory - Creating new MySQL-DB-Connection jdbc:mysql://localhost:3306/advnojpadb
+19:06:20.277 [main] DEBUG d.lessismore.nojpa.pool.ResourcePool - Creating pool -done
+19:06:20.277 [main] DEBUG d.l.nojpa.db.SQLStatementExecutor - Will update with:::drop table if exists _Person
+19:06:20.280 [main] DEBUG d.l.nojpa.db.SQLStatementExecutor - Will update with:::create table _Person ( 	parent CHAR(32),  	name VARCHAR(250),  	creationDate DATETIME,  	objectID CHAR(32) NOT NULL, 	primary key (objectID)   ) ENGINE=MyISAM
+19:06:20.289 [main] DEBUG d.l.nojpa.db.SQLStatementExecutor - Will update with:::drop table if exists _Person_children
+19:06:20.290 [main] DEBUG d.l.nojpa.db.SQLStatementExecutor - Will update with:::create table _Person_children ( 	Person_objectID CHAR(32) NOT NULL,  	objectID CHAR(32) NOT NULL, 	primary key (Person_objectID, objectID)   ) ENGINE=MyISAM
+19:06:20.297 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - ********* re/createDatabase ********************* - DONE
+19:06:20.354 [main] DEBUG d.l.n.r.db.model.SolrServiceImpl - [ : constructor]:HIT:
+19:06:20.354 [main] DEBUG d.l.n.r.db.model.SolrServiceImpl - [void : (nojpa)startup]:HIT: dk.lessismore.nojpa.reflection.db.model.SolrServiceImpl@7e4d2287
+19:06:20.354 [main] ERROR d.l.n.r.db.model.SolrServiceImpl - [File : getSolrXml]: can't get solr xml resource: null
+java.lang.NullPointerException: null
+	at dk.lessismore.nojpa.reflection.db.model.SolrServiceImpl.getSolrXml(SolrServiceImpl.java:205) [nojpa_orm-0.1-20150226.111810-62.jar:na]
+	at dk.lessismore.nojpa.reflection.db.model.SolrServiceImpl.startup(SolrServiceImpl.java:66) [nojpa_orm-0.1-20150226.111810-62.jar:na]
+	at dk.lessismore.nojpa.reflection.db.model.SolrServiceImpl.getServer(SolrServiceImpl.java:55) [nojpa_orm-0.1-20150226.111810-62.jar:na]
+	at dk.lessismore.advnojpa.config.SolrConfig.getSolrService(SolrConfig.java:30) [classes/:na]
+	at dk.lessismore.advnojpa.config.SolrConfig.personSolrService(SolrConfig.java:23) [classes/:na]
+	at dk.lessismore.advnojpa.config.SolrConfig$$EnhancerBySpringCGLIB$$c96412d0.CGLIB$personSolrService$0(<generated>) [spring-core-4.1.5.RELEASE.jar:na]
+	at dk.lessismore.advnojpa.config.SolrConfig$$EnhancerBySpringCGLIB$$c96412d0$$FastClassBySpringCGLIB$$95d38b22.invoke(<generated>) [spring-core-4.1.5.RELEASE.jar:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) [spring-core-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:309) [spring-context-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at dk.lessismore.advnojpa.config.SolrConfig$$EnhancerBySpringCGLIB$$c96412d0.personSolrService(<generated>) [spring-core-4.1.5.RELEASE.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1111) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1006) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757) [spring-context-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480) [spring-context-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:686) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:320) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:957) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:946) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at dk.lessismore.advnojpa.Application.main(Application.java:28) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134) [idea_rt.jar:na]
+19:06:20.354 [main] DEBUG d.l.n.r.db.model.SolrServiceImpl - [ : config ]:: null
+19:06:20.358 [main] ERROR d.l.n.r.db.model.SolrServiceImpl - [ void: (nojpa)startup ]: exception constructing embedded server: null
+java.lang.NullPointerException: null
+	at dk.lessismore.nojpa.reflection.db.model.SolrServiceImpl.startup(SolrServiceImpl.java:68) [nojpa_orm-0.1-20150226.111810-62.jar:na]
+	at dk.lessismore.nojpa.reflection.db.model.SolrServiceImpl.getServer(SolrServiceImpl.java:55) [nojpa_orm-0.1-20150226.111810-62.jar:na]
+	at dk.lessismore.advnojpa.config.SolrConfig.getSolrService(SolrConfig.java:30) [classes/:na]
+	at dk.lessismore.advnojpa.config.SolrConfig.personSolrService(SolrConfig.java:23) [classes/:na]
+	at dk.lessismore.advnojpa.config.SolrConfig$$EnhancerBySpringCGLIB$$c96412d0.CGLIB$personSolrService$0(<generated>) [spring-core-4.1.5.RELEASE.jar:na]
+	at dk.lessismore.advnojpa.config.SolrConfig$$EnhancerBySpringCGLIB$$c96412d0$$FastClassBySpringCGLIB$$95d38b22.invoke(<generated>) [spring-core-4.1.5.RELEASE.jar:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) [spring-core-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:309) [spring-context-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at dk.lessismore.advnojpa.config.SolrConfig$$EnhancerBySpringCGLIB$$c96412d0.personSolrService(<generated>) [spring-core-4.1.5.RELEASE.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1111) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1006) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757) [spring-context-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480) [spring-context-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:686) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:320) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:957) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:946) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at dk.lessismore.advnojpa.Application.main(Application.java:28) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134) [idea_rt.jar:na]
+19:06:20.359 [main] INFO  d.l.n.r.d.m.ModelObjectSearchService - Adding solrServer(null) for class(Person)
+19:06:20.404 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - ------------ Getting all children of MOI from package: dk.lessismore.advnojpa.model
+19:06:20.405 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - annoList.size()::0
+19:06:20.405 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - getSubtypes: removing because it's annotated with @IgnoreFromTableCreation clazz = []
+19:06:20.406 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - getSubtypes: found types: [interface dk.lessismore.advnojpa.model.Person]
+19:07:24.912 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - ------------ Getting all children of MOI from package: dk.lessismore.advnojpa.model
+19:07:24.978 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - annoList.size()::0
+19:07:24.979 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - getSubtypes: removing because it's annotated with @IgnoreFromTableCreation clazz = []
+19:07:24.979 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - getSubtypes: found types: [interface dk.lessismore.advnojpa.model.Person]
+19:07:24.979 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - ********* re/createDatabase ***************** - START
+19:07:24.983 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - Will create table for class dk.lessismore.advnojpa.model.Person with indices []
+19:07:24.985 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: getName
+19:07:24.986 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(Person.getName) = true
+19:07:24.987 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: getParent
+19:07:24.987 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(Person.getParent) = true
+19:07:24.987 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: setName
+19:07:24.987 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(Person.setName) = false
+19:07:24.987 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: setParent
+19:07:24.987 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(Person.setParent) = false
+19:07:24.987 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: getChildren
+19:07:24.987 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(Person.getChildren) = true
+19:07:24.987 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: setChildren
+19:07:24.987 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(Person.setChildren) = false
+19:07:24.987 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: getCreationDate
+19:07:24.987 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(ModelObjectInterface.getCreationDate) = true
+19:07:24.987 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: getObjectID
+19:07:24.987 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(ModelObjectInterface.getObjectID) = true
+19:07:24.987 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: setObjectID
+19:07:24.987 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(ModelObjectInterface.setObjectID) = false
+19:07:24.987 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: setCreationDate
+19:07:24.987 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(ModelObjectInterface.setCreationDate) = false
+19:07:24.987 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: isDirty
+19:07:24.987 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(ModelObjectInterface.isDirty) = false
+19:07:24.987 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: isNew
+19:07:24.987 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(ModelObjectInterface.isNew) = false
+19:07:24.987 [main] DEBUG d.l.n.r.a.AttributeContainer - dk.lessismore.advnojpa.model.Person: Current Method: isCachable
+19:07:24.987 [main] DEBUG d.l.n.reflection.util.ClassAnalyser - ClassAnalyser.isValidGetMethod(ModelObjectInterface.isCachable) = false
+19:07:24.991 [main] DEBUG d.l.nojpa.cache.ObjectArrayCache - Cant find resources for ObjectArrayCache.properties - will use standard values: maxCacheSize(2000)
+19:07:24.991 [main] DEBUG d.l.nojpa.cache.ObjectArrayCache - Cant find resources for ObjectArrayCache.properties - will use standard values: cacheOn(true)
+19:07:24.992 [main] DEBUG d.l.n.resources.PropertyResources - Loading : file:/Users/niakoi/Projects/advanced-nojpa/target/classes/ObjectCache.properties
+19:07:24.992 [main] DEBUG d.l.n.r.db.model.ModelObjectProxy - Creating new ModelObject(dk.lessismore.advnojpa.model.Person)/0
+19:07:24.995 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - makeTableFromClass : attributeContainer = Table:_Person
+DbAtt:Att: name(parent) attribute.type(Person) isArray(false) isWriteable(true) isReadable(true) class=Person		isPrimaryKey=false isAssociation=true isMultiAssociation=false DataType=VARCHAR(32)
+DbAtt:Att: name(children) attribute.type(Person) isArray(true) isWriteable(true) isReadable(true) class=Person		isPrimaryKey=false isAssociation=true isMultiAssociation=true DataType=VARCHAR(32)
+DbAtt:Att: name(name) attribute.type(String) isArray(false) isWriteable(true) isReadable(true) class=String		isPrimaryKey=false isAssociation=false isMultiAssociation=false DataType=VARCHAR(250)
+DbAtt:Att: name(creationDate) attribute.type(Calendar) isArray(false) isWriteable(true) isReadable(true) class=Calendar		isPrimaryKey=false isAssociation=false isMultiAssociation=false DataType=DATETIME
+DbAtt:Att: name(objectID) attribute.type(String) isArray(false) isWriteable(true) isReadable(true) class=String		isPrimaryKey=true isAssociation=false isMultiAssociation=false DataType=CHAR(32)
+
+19:07:24.999 [main] DEBUG d.l.n.d.s.SQLStatementFactory - getDropSQLStatement() :: log = MYSQL
+19:07:24.999 [main] DEBUG d.l.n.d.s.SQLStatementFactory - getCreateSQLStatement() :: log = MYSQL
+19:07:25.000 [main] DEBUG d.l.n.d.s.SQLStatementFactory - getDropSQLStatement() :: log = MYSQL
+19:07:25.000 [main] DEBUG d.l.n.d.s.SQLStatementFactory - getCreateSQLStatement() :: log = MYSQL
+19:07:25.000 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - makeTableFromClass : targetClass = interface dk.lessismore.advnojpa.model.Person
+19:07:25.000 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - makeTableFromClass : dbAttribute.getAttributeName() = name
+19:07:25.000 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - makeTableFromClass : dbAttribute.getAttribute().getDeclaredAnnotations() = [Ljava.lang.annotation.Annotation;@746cd757
+19:07:25.000 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - makeTableFromClass : targetClass = interface dk.lessismore.advnojpa.model.Person
+19:07:25.000 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - makeTableFromClass : dbAttribute.getAttributeName() = creationDate
+19:07:25.000 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - makeTableFromClass : dbAttribute.getAttribute().getDeclaredAnnotations() = [Ljava.lang.annotation.Annotation;@ae372b9
+19:07:25.002 [main] INFO  d.l.nojpa.resources.PropertyService - Read {SQLStatementExecutor=dk.lessismore.nojpa.resources.PropertyResources@6a2eea2a}, class=SQLStatementExecutor
+19:07:25.007 [main] ERROR d.l.nojpa.resources.Resources - The resource debug does not exists is missing or file
+java.lang.Exception: The resource debug does not exists is missing or file
+	at dk.lessismore.nojpa.resources.Resources.getBoolean(Resources.java:145) ~[nojpa_orm-0.1-20150226.111810-62.jar:na]
+	at dk.lessismore.nojpa.db.SQLStatementExecutor.<clinit>(SQLStatementExecutor.java:52) [nojpa_orm-0.1-20150226.111810-62.jar:na]
+	at dk.lessismore.nojpa.reflection.db.DatabaseCreator.createDatabase(DatabaseCreator.java:374) [nojpa_orm-0.1-20150226.111810-62.jar:na]
+	at dk.lessismore.nojpa.reflection.db.DatabaseCreator.createDatabase(DatabaseCreator.java:335) [nojpa_orm-0.1-20150226.111810-62.jar:na]
+	at dk.lessismore.nojpa.reflection.db.DatabaseCreator.createDatabase(DatabaseCreator.java:329) [nojpa_orm-0.1-20150226.111810-62.jar:na]
+	at dk.lessismore.advnojpa.service.impl.InitDatabaseServiceImpl.createDatabase(InitDatabaseServiceImpl.java:76) [classes/:na]
+	at dk.lessismore.advnojpa.service.impl.InitDatabaseServiceImpl.init(InitDatabaseServiceImpl.java:55) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:349) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:300) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:133) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:408) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1558) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1120) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1044) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:942) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:533) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1202) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757) [spring-context-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480) [spring-context-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:686) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:320) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:957) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:946) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at dk.lessismore.advnojpa.Application.main(Application.java:28) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134) [idea_rt.jar:na]
+19:07:25.007 [main] DEBUG d.l.n.d.c.ConnectionPoolFactory - making pool
+19:07:25.028 [main] DEBUG d.lessismore.nojpa.pool.ResourcePool - Creating pool x-start
+19:07:25.028 [main] DEBUG d.lessismore.nojpa.pool.ResourcePool - createPool() making(0 out of 10)
+19:07:25.028 [main] DEBUG d.l.n.d.s.SQLStatementFactory - We will connect to database with DriverName(com.mysql.jdbc.Driver)
+19:07:25.028 [main] DEBUG d.l.n.d.c.ConnectionFactory - Creating new MySQL-DB-Connection jdbc:mysql://localhost:3306/advnojpadb
+19:07:25.214 [main] DEBUG d.lessismore.nojpa.pool.ResourcePool - createPool() making(1 out of 10)
+19:07:25.214 [main] DEBUG d.l.n.d.s.SQLStatementFactory - We will connect to database with DriverName(com.mysql.jdbc.Driver)
+19:07:25.214 [main] DEBUG d.l.n.d.c.ConnectionFactory - Creating new MySQL-DB-Connection jdbc:mysql://localhost:3306/advnojpadb
+19:07:25.218 [main] DEBUG d.lessismore.nojpa.pool.ResourcePool - createPool() making(2 out of 10)
+19:07:25.218 [main] DEBUG d.l.n.d.s.SQLStatementFactory - We will connect to database with DriverName(com.mysql.jdbc.Driver)
+19:07:25.218 [main] DEBUG d.l.n.d.c.ConnectionFactory - Creating new MySQL-DB-Connection jdbc:mysql://localhost:3306/advnojpadb
+19:07:25.221 [main] DEBUG d.lessismore.nojpa.pool.ResourcePool - createPool() making(3 out of 10)
+19:07:25.221 [main] DEBUG d.l.n.d.s.SQLStatementFactory - We will connect to database with DriverName(com.mysql.jdbc.Driver)
+19:07:25.221 [main] DEBUG d.l.n.d.c.ConnectionFactory - Creating new MySQL-DB-Connection jdbc:mysql://localhost:3306/advnojpadb
+19:07:25.224 [main] DEBUG d.lessismore.nojpa.pool.ResourcePool - createPool() making(4 out of 10)
+19:07:25.224 [main] DEBUG d.l.n.d.s.SQLStatementFactory - We will connect to database with DriverName(com.mysql.jdbc.Driver)
+19:07:25.224 [main] DEBUG d.l.n.d.c.ConnectionFactory - Creating new MySQL-DB-Connection jdbc:mysql://localhost:3306/advnojpadb
+19:07:25.228 [main] DEBUG d.lessismore.nojpa.pool.ResourcePool - createPool() making(5 out of 10)
+19:07:25.228 [main] DEBUG d.l.n.d.s.SQLStatementFactory - We will connect to database with DriverName(com.mysql.jdbc.Driver)
+19:07:25.228 [main] DEBUG d.l.n.d.c.ConnectionFactory - Creating new MySQL-DB-Connection jdbc:mysql://localhost:3306/advnojpadb
+19:07:25.232 [main] DEBUG d.lessismore.nojpa.pool.ResourcePool - createPool() making(6 out of 10)
+19:07:25.232 [main] DEBUG d.l.n.d.s.SQLStatementFactory - We will connect to database with DriverName(com.mysql.jdbc.Driver)
+19:07:25.232 [main] DEBUG d.l.n.d.c.ConnectionFactory - Creating new MySQL-DB-Connection jdbc:mysql://localhost:3306/advnojpadb
+19:07:25.235 [main] DEBUG d.lessismore.nojpa.pool.ResourcePool - createPool() making(7 out of 10)
+19:07:25.235 [main] DEBUG d.l.n.d.s.SQLStatementFactory - We will connect to database with DriverName(com.mysql.jdbc.Driver)
+19:07:25.235 [main] DEBUG d.l.n.d.c.ConnectionFactory - Creating new MySQL-DB-Connection jdbc:mysql://localhost:3306/advnojpadb
+19:07:25.238 [main] DEBUG d.lessismore.nojpa.pool.ResourcePool - createPool() making(8 out of 10)
+19:07:25.238 [main] DEBUG d.l.n.d.s.SQLStatementFactory - We will connect to database with DriverName(com.mysql.jdbc.Driver)
+19:07:25.238 [main] DEBUG d.l.n.d.c.ConnectionFactory - Creating new MySQL-DB-Connection jdbc:mysql://localhost:3306/advnojpadb
+19:07:25.241 [main] DEBUG d.lessismore.nojpa.pool.ResourcePool - createPool() making(9 out of 10)
+19:07:25.241 [main] DEBUG d.l.n.d.s.SQLStatementFactory - We will connect to database with DriverName(com.mysql.jdbc.Driver)
+19:07:25.242 [main] DEBUG d.l.n.d.c.ConnectionFactory - Creating new MySQL-DB-Connection jdbc:mysql://localhost:3306/advnojpadb
+19:07:25.244 [main] DEBUG d.lessismore.nojpa.pool.ResourcePool - Creating pool -done
+19:07:25.244 [main] DEBUG d.l.nojpa.db.SQLStatementExecutor - Will update with:::drop table if exists _Person
+19:07:25.247 [main] DEBUG d.l.nojpa.db.SQLStatementExecutor - Will update with:::create table _Person ( 	parent CHAR(32),  	name VARCHAR(250),  	creationDate DATETIME,  	objectID CHAR(32) NOT NULL, 	primary key (objectID)   ) ENGINE=MyISAM
+19:07:25.256 [main] DEBUG d.l.nojpa.db.SQLStatementExecutor - Will update with:::drop table if exists _Person_children
+19:07:25.257 [main] DEBUG d.l.nojpa.db.SQLStatementExecutor - Will update with:::create table _Person_children ( 	Person_objectID CHAR(32) NOT NULL,  	objectID CHAR(32) NOT NULL, 	primary key (Person_objectID, objectID)   ) ENGINE=MyISAM
+19:07:25.263 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - ********* re/createDatabase ********************* - DONE
+19:07:25.308 [main] DEBUG d.l.n.r.db.model.SolrServiceImpl - [ : constructor]:HIT:
+19:07:25.309 [main] DEBUG d.l.n.r.db.model.SolrServiceImpl - [void : (nojpa)startup]:HIT: dk.lessismore.nojpa.reflection.db.model.SolrServiceImpl@3f4b840d
+19:07:25.309 [main] ERROR d.l.n.r.db.model.SolrServiceImpl - [File : getSolrXml]: can't get solr xml resource: null
+java.lang.NullPointerException: null
+	at dk.lessismore.nojpa.reflection.db.model.SolrServiceImpl.getSolrXml(SolrServiceImpl.java:205) [nojpa_orm-0.1-20150226.111810-62.jar:na]
+	at dk.lessismore.nojpa.reflection.db.model.SolrServiceImpl.startup(SolrServiceImpl.java:66) [nojpa_orm-0.1-20150226.111810-62.jar:na]
+	at dk.lessismore.nojpa.reflection.db.model.SolrServiceImpl.getServer(SolrServiceImpl.java:55) [nojpa_orm-0.1-20150226.111810-62.jar:na]
+	at dk.lessismore.advnojpa.config.SolrConfig.getSolrService(SolrConfig.java:30) [classes/:na]
+	at dk.lessismore.advnojpa.config.SolrConfig.personSolrService(SolrConfig.java:23) [classes/:na]
+	at dk.lessismore.advnojpa.config.SolrConfig$$EnhancerBySpringCGLIB$$c96412d0.CGLIB$personSolrService$0(<generated>) [spring-core-4.1.5.RELEASE.jar:na]
+	at dk.lessismore.advnojpa.config.SolrConfig$$EnhancerBySpringCGLIB$$c96412d0$$FastClassBySpringCGLIB$$95d38b22.invoke(<generated>) [spring-core-4.1.5.RELEASE.jar:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) [spring-core-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:309) [spring-context-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at dk.lessismore.advnojpa.config.SolrConfig$$EnhancerBySpringCGLIB$$c96412d0.personSolrService(<generated>) [spring-core-4.1.5.RELEASE.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1111) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1006) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757) [spring-context-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480) [spring-context-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:686) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:320) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:957) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:946) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at dk.lessismore.advnojpa.Application.main(Application.java:28) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134) [idea_rt.jar:na]
+19:07:25.309 [main] DEBUG d.l.n.r.db.model.SolrServiceImpl - [ : config ]:: null
+19:07:25.312 [main] ERROR d.l.n.r.db.model.SolrServiceImpl - [ void: (nojpa)startup ]: exception constructing embedded server: null
+java.lang.NullPointerException: null
+	at dk.lessismore.nojpa.reflection.db.model.SolrServiceImpl.startup(SolrServiceImpl.java:68) [nojpa_orm-0.1-20150226.111810-62.jar:na]
+	at dk.lessismore.nojpa.reflection.db.model.SolrServiceImpl.getServer(SolrServiceImpl.java:55) [nojpa_orm-0.1-20150226.111810-62.jar:na]
+	at dk.lessismore.advnojpa.config.SolrConfig.getSolrService(SolrConfig.java:30) [classes/:na]
+	at dk.lessismore.advnojpa.config.SolrConfig.personSolrService(SolrConfig.java:23) [classes/:na]
+	at dk.lessismore.advnojpa.config.SolrConfig$$EnhancerBySpringCGLIB$$c96412d0.CGLIB$personSolrService$0(<generated>) [spring-core-4.1.5.RELEASE.jar:na]
+	at dk.lessismore.advnojpa.config.SolrConfig$$EnhancerBySpringCGLIB$$c96412d0$$FastClassBySpringCGLIB$$95d38b22.invoke(<generated>) [spring-core-4.1.5.RELEASE.jar:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) [spring-core-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:309) [spring-context-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at dk.lessismore.advnojpa.config.SolrConfig$$EnhancerBySpringCGLIB$$c96412d0.personSolrService(<generated>) [spring-core-4.1.5.RELEASE.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1111) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1006) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755) [spring-beans-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757) [spring-context-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480) [spring-context-4.1.5.RELEASE.jar:4.1.5.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:686) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:320) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:957) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:946) [spring-boot-1.2.2.RELEASE.jar:1.2.2.RELEASE]
+	at dk.lessismore.advnojpa.Application.main(Application.java:28) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134) [idea_rt.jar:na]
+19:07:25.313 [main] INFO  d.l.n.r.d.m.ModelObjectSearchService - Adding solrServer(null) for class(Person)
+19:07:25.360 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - ------------ Getting all children of MOI from package: dk.lessismore.advnojpa.model
+19:07:25.361 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - annoList.size()::0
+19:07:25.362 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - getSubtypes: removing because it's annotated with @IgnoreFromTableCreation clazz = []
+19:07:25.362 [main] DEBUG d.l.n.reflection.db.DatabaseCreator - getSubtypes: found types: [interface dk.lessismore.advnojpa.model.Person]
