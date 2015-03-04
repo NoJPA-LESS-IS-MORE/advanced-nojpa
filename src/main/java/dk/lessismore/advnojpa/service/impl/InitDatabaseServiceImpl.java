@@ -1,6 +1,8 @@
 package dk.lessismore.advnojpa.service.impl;
 
+import dk.lessismore.advnojpa.model.Book;
 import dk.lessismore.advnojpa.model.Person;
+import dk.lessismore.advnojpa.service.BookService;
 import dk.lessismore.advnojpa.service.PersonService;
 import dk.lessismore.nojpa.db.connectionpool.ConnectionPoolFactory;
 import dk.lessismore.nojpa.reflection.db.DatabaseCreator;
@@ -27,6 +29,9 @@ public class InitDatabaseServiceImpl {
 
     @Autowired
     private PersonService personService;
+
+    @Autowired
+    private BookService bookService;
 
     @Autowired
     private Environment environment;
@@ -67,7 +72,11 @@ public class InitDatabaseServiceImpl {
 
     private void createPeople() {
         for (int i = 0; i < 5; i++) {
-            Person parent = personService.create("Parent " + ('a' + i), null);
+            Person writer = personService.create("Writer " + (char)('a' + i));
+            for (int j = 0; j < i + 2; j++) {
+                Book book = bookService.create("Title " + (char) ('a' + i) + (char) ('a' + j));
+                bookService.assign(book, writer);
+            }
         }
     }
 

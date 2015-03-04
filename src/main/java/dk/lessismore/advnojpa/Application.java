@@ -2,6 +2,7 @@ package dk.lessismore.advnojpa;
 
 import dk.lessismore.advnojpa.service.impl.InitDatabaseServiceImpl;
 import dk.lessismore.common.nologger.aspect.DefaultLoggingAspect;
+import dk.lessismore.nojpa.reflection.db.model.SolrService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -15,6 +16,9 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @ComponentScan
 @EnableAspectJAutoProxy(proxyTargetClass=true)
 public class Application {
+
+    @Autowired
+    SolrService personSolrService;
 
     @Autowired
     private InitDatabaseServiceImpl initDatabaseService;

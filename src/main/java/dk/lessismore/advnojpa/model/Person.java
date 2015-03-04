@@ -2,11 +2,13 @@ package dk.lessismore.advnojpa.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import dk.lessismore.nojpa.db.methodquery.MQL;
+import dk.lessismore.nojpa.reflection.db.annotations.DbStrip;
 import dk.lessismore.nojpa.reflection.db.model.ModelObjectInterface;
 import dk.lessismore.nojpa.rest.Locator;
 import dk.lessismore.nojpa.rest.ObjectLocator;
 import dk.lessismore.nojpa.rest.ObjectPrinter;
 import dk.lessismore.nojpa.rest.Printer;
+
 
 /**
  * Created by niakoi on 4/3/15.
@@ -16,14 +18,12 @@ import dk.lessismore.nojpa.rest.Printer;
 public interface Person extends ModelObjectInterface {
 
     String getName();
+    @DbStrip(stripItSoft = false, stripItHard = false)
     void setName(String name);
 
-    Person getParent();
-    void setParent(Person parent);
-
     @JsonIgnore
-    Person[] getChildren();
-    void setChildren(Person[] children);
+    Book[] getBooks();
+    void setBooks(Book[] books);
 
     public static class Locator implements ObjectLocator<Person> {
         @Override

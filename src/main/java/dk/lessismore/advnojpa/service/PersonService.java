@@ -11,7 +11,7 @@ import java.util.List;
  */
 public interface PersonService {
 
-    Person create(String name, Person parent);
+    Person create(String name);
 
     List<Person> get();
 
