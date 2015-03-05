@@ -99,7 +99,7 @@
        replication is in use, this should match the replication
        configuration.
     -->
-  <dataDir>/raid0/reqxl_index</dataDir>
+   <dataDir>${solr.data.dir:./solr/data}</dataDir>
 
 
   <!-- The DirectoryFactory to use for indexes.

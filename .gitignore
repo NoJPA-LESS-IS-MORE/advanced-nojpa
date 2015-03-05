@@ -4,3 +4,6 @@
 *.ipr
 *.iml
 target/
+solr/
+catalina*
+index/

@@ -1,6 +1,7 @@
 package dk.lessismore.advnojpa.service.impl;
 
 import dk.lessismore.advnojpa.model.Address;
+import dk.lessismore.advnojpa.model.Book;
 import dk.lessismore.advnojpa.model.Person;
 import dk.lessismore.advnojpa.service.PersonService;
 import dk.lessismore.nojpa.db.methodquery.MQL;
@@ -44,6 +45,20 @@ public class PersonServiceImpl implements PersonService {
     public void lives(Person person, Address address) {
         person.setAddress(address);
         save(person);
+    }
+
+    @Override
+    public void addBook(Person writer, Book book) {
+        writer.setBooks(ModelObjectService.addObjectToArray(writer.getBooks(), book));
+        writer.setIgnoredBooks(ModelObjectService.addObjectToArray(writer.getIgnoredBooks(), book));
+        save(writer);
+    }
+
+    @Override
+    public void removeBook(Person writer, Book book) {
+        writer.setBooks(ModelObjectService.removeObjectFromArray(writer.getBooks(), book));
+        writer.setIgnoredBooks(ModelObjectService.removeObjectFromArray(writer.getIgnoredBooks(), book));
+        save(writer);
     }
 
     private void save(Person person) {

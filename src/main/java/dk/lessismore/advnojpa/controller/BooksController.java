@@ -31,7 +31,7 @@ public class BooksController {
     }
 
 
-    @RequestMapping(value = "{person}/books", method = RequestMethod.PUT)
+    @RequestMapping(value = "/people/{person}/books", method = RequestMethod.POST)
     public Book[] assignBook(@PathVariable Person person, @RequestParam Book book) {
         bookService.assign(book, person);
         return person.getBooks();

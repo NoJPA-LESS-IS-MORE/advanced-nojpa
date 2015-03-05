@@ -9,5 +9,4 @@ import dk.lessismore.advnojpa.model.Person;
 public interface BookService {
     Book create(String title);
     void assign(Book book, Person writer);
-    void unassign(Book book);
 }

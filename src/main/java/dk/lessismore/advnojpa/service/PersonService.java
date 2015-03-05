@@ -1,7 +1,9 @@
 package dk.lessismore.advnojpa.service;
 
 import dk.lessismore.advnojpa.model.Address;
+import dk.lessismore.advnojpa.model.Book;
 import dk.lessismore.advnojpa.model.Person;
+import dk.lessismore.nojpa.rest.Locator;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -19,4 +21,8 @@ public interface PersonService {
     Page<Person> get(Pageable p);
 
     void lives(Person person, Address address);
+
+    void addBook(Person writer, Book book);
+
+    void removeBook(Person writer, Book book);
 }

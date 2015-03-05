@@ -25,7 +25,7 @@
 - n..n with manual aux table
 
 ### Table and field names
-- shot in the foot with sql priv words !!!
+- shot in the foot with sql keywords
 
 ## Solr documents
 - flat documents
@@ -36,5 +36,10 @@
 # NoJpa in a cluster
 
 ## Invalidating others caches
+- ObjectCacheRemote
+- cluster configuration
+- nojpas will communicate with each other directly
 
 ## `synchronized` across multiple jvms
+- GlobalLockService - locking on a String representation of a model object or a random string
+- GlobalLockService.LockedExecutor<T>
