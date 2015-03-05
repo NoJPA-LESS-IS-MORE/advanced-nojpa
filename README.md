@@ -21,7 +21,7 @@
 
 ## MySQL tables
 
-### relations
+### very model much relationship
 
 - 1..n with aux table - automatic or manually (weight of a reference?)
 - 1..n with back reference
@@ -33,9 +33,9 @@
 
 ## Solr documents
 
-- flat documents
+- flat documents `curl http://localhost:8080/solr-debug`
 - "schemaless" solr schema
-- field name generation
+- field name generation `curl http://localhost:8080/solr-log-fields`
 
 
 # NoJpa in a cluster
@@ -50,3 +50,5 @@
 
 - GlobalLockService - locking on a String representation of a model object or a random string
 - GlobalLockService.LockedExecutor<T>
+- `curl localhost:6061/cluster-lock/Writer%20a`
+- `curl localhost:6062/cluster-lock/Writer%20a`

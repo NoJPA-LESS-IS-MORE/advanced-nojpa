@@ -43,11 +43,4 @@ public class SolrController {
         log.debug(NQL.asString(mPerson.getBooks()[NQL.ANY].getWriter().getName()));
     }
 
-    @RequestMapping("/nql-log-attr")
-    public void nqlFields() {
-        Person mPerson = NQL.mock(Person.class);
-        Person first = NQL.search(mPerson).getFirst();
-        ModelObject object = (ModelObject) first;
-
-    }
 }

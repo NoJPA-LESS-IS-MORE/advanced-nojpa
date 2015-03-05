@@ -29,7 +29,10 @@ public class ClusterController {
                 @Override
                 public void execute(Person ms) throws Exception {
                     log.debug("::::::::::::: EXECUTE - START");
-                    Thread.sleep(lockerSleep);
+                    for(int i = 0; i < lockerSleep; i ++) {
+                        log.debug("------------ Running in executor");
+                        Thread.sleep(50);
+                    }
                     log.debug("::::::::::::: EXECUTE - END");
                 }
             });
