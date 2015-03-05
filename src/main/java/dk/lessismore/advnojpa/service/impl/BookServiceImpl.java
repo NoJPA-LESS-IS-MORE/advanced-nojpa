@@ -31,7 +31,7 @@ public class BookServiceImpl implements BookService {
         if (book.getWriter() != null) {
            personService.removeBook(book.getWriter(), book);
         }
-        book.setWriter(writer);
+        book.setWriter(writer); // isDirty will work for writer->getBook,
         personService.addBook(writer, book);
         save(book);
     }
